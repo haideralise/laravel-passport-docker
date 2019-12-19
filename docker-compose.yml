@@ -22,6 +22,9 @@ services:
     image: mysql:5.7.22
     container_name: mysql
     restart: unless-stopped
+    volumes:
+      - ./data:/var/lib/mysql
+    #command: "true"
     tty: true
     ports:
       - "3306:3306"
